@@ -396,7 +396,7 @@ const experiences = [
 <style scoped>
 .home {
   padding: 24px;
-  max-width: 1000px;
+  max-width: 100%; /* Ensure it expands with parent */
   margin: 0 auto;
 }
 
@@ -406,8 +406,9 @@ const experiences = [
   }
 }
 
-.profile-card {
-  text-align: center;
+.profile-card,
+.content-card {
+  width: 100%; /* Ensure cards fill available space */
   background: #fff;
   border-radius: 8px;
 }
@@ -585,11 +586,6 @@ const experiences = [
   color: #1890ff;
 }
 
-.content-card {
-  background: #fff;
-  border-radius: 8px;
-}
-
 .intro-text {
   font-size: 16px;
   line-height: 1.6;
@@ -665,6 +661,28 @@ const experiences = [
   height: 100px;
   width: 100px;
   object-fit: contain;
+}
+
+/* Mobile specific adjustments for experience section */
+@media (max-width: 768px) {
+  .experience-entry {
+    flex-direction: column; /* Stack logo and text vertically */
+    align-items: center; /* Center items when stacked */
+    gap: 8px; /* Reduce gap */
+  }
+
+  .experience-info {
+    text-align: center; /* Center text info when stacked */
+  }
+
+  .company-logo-container {
+    width: 80px; /* Smaller container width */
+  }
+
+  .company-logo {
+    height: 60px; /* Smaller logo size */
+    width: 60px;
+  }
 }
 
 .company-link {

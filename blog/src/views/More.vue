@@ -355,7 +355,7 @@ const getSkillColor = (category) => {
 <style scoped>
 .more-container {
   padding: 24px;
-  max-width: 1000px;
+  max-width: 100%; /* Ensure it expands with parent */
   margin: 0 auto;
 }
 
@@ -367,6 +367,7 @@ const getSkillColor = (category) => {
 }
 
 .section-card {
+  width: 100%; /* Ensure cards fill available space */
   background: #fff;
   border-radius: 8px;
 }
@@ -528,9 +529,25 @@ const getSkillColor = (category) => {
   line-height: 1.5;
 }
 
+/* Mobile specific adjustments for experience section */
 @media (max-width: 768px) {
-  .more-container {
-    padding: 16px;
+  .experience-entry {
+    flex-direction: column; /* Stack logo and text vertically */
+    align-items: center; /* Center items when stacked */
+    gap: 8px; /* Reduce gap */
+  }
+
+  .experience-item {
+    text-align: center; /* Center text info when stacked */
+  }
+
+  .company-logo-container {
+    width: 80px; /* Smaller container width */
+  }
+
+  .company-logo {
+    height: 60px; /* Smaller logo size */
+    width: 60px;
   }
 }
 

@@ -3,8 +3,9 @@ import { ref, reactive } from 'vue';
 import { useRouter } from 'vue-router';
 import avatar from './assets/avatar.png';
 import { useAuthStore } from './stores/auth';
-import { DownOutlined, MenuOutlined } from '@ant-design/icons-vue'; // Import MenuOutlined
+import { DownOutlined, MenuOutlined } from '@ant-design/icons-vue'; // Remove CustomerServiceOutlined import
 import { message } from 'ant-design-vue';
+import Chat from './views/Chat.vue'; // Corrected path for Chat.vue
 
 const selectedKeys = ref(['home']); // 默认选中 Home
 const authStore = useAuthStore(); // Use auth store
@@ -112,6 +113,16 @@ const handleRegisterModalCancel = () => {
 const handleLogout = () => {
   authStore.logout();
   router.push('/login'); // Redirect to login page after logout (or home if no login page)
+};
+
+const isChatModalVisible = ref(false);
+
+const showChatModal = () => {
+  isChatModalVisible.value = true;
+};
+
+const handleChatModalCancel = () => {
+  isChatModalVisible.value = false;
 };
 </script>
 
@@ -325,6 +336,25 @@ const handleLogout = () => {
         </a-dropdown>
       </div> -->
     </a-drawer>
+
+    <a-float-button
+      :style="{ right: '24px', bottom: '24px', width: '80px', height: '80px', display: 'flex', justifyContent: 'center', alignItems: 'center' }"
+      @click="showChatModal"
+    >
+      <template #icon>
+        <font-awesome-icon :icon="['fas', 'robot']" :style="{ fontSize: '30px', color: '#1890ff' }" />
+      </template>
+    </a-float-button>
+
+    <a-modal
+      v-model:open="isChatModalVisible"
+      title="AI Chat"
+      :footer="null"
+      width="80%"
+      @cancel="handleChatModalCancel"
+    >
+      <Chat />
+    </a-modal>
   </a-layout>
 </template>
 
@@ -518,5 +548,15 @@ const handleLogout = () => {
 .auth-section-drawer {
   margin-top: 24px;
   padding: 0 16px;
+}
+
+/* Custom styles to fix Ant Design float button icon clipping */
+.ant-float-btn-icon {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: visible !important;
 }
 </style>

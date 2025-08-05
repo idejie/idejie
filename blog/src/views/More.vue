@@ -128,7 +128,7 @@
       <!-- Experience Section -->
       <a-card class="section-card" title="Experience">
         <a-timeline>
-          <a-timeline-item>
+          <!-- <a-timeline-item>
             <template #dot>
               <ClockCircleOutlined style="font-size: 16px" />
             </template>
@@ -148,7 +148,7 @@
                 <img :src="spiritAILogo" alt="Spirit AI logo" class="company-logo" />
               </div>
             </div>
-          </a-timeline-item>
+          </a-timeline-item> -->
           <a-timeline-item>
             <template #dot>
               <GlobalOutlined style="font-size: 16px" />

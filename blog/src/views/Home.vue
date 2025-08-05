@@ -39,7 +39,7 @@
             I am a fourth-year Ph.D. student at Peking University, advised by <a href="https://www.csyangliu.com/" target="_blank" class="advisor-link">Prof. Yang Liu</a>. 
           </p>
           <p>
-            Previously, I received M.E. degree from University of Chinese Academy of Sciences, advised by <a href="https://people.ucas.ac.cn/~iieLibo" target="_blank" class="advisor-link">Prof. Bo Li</a>, and B.E. degree from Shandong University, advised by <a href="https://www.linkedin.com/in/yafang-wang-962b3535/" target="_blank" class="advisor-link">Prof. Yafang Wang</a>.
+            Previously, I received M.Sc. degree from University of Chinese Academy of Sciences, advised by <a href="https://people.ucas.ac.cn/~iieLibo" target="_blank" class="advisor-link">Prof. Bo Li</a>, and B.E. degree from Shandong University, advised by <a href="https://www.linkedin.com/in/yafang-wang-962b3535/" target="_blank" class="advisor-link">Prof. Yafang Wang</a>.
           </p>
           <p>My research interests include Large Models and Multi-Modal learning.</p>
         </div>
@@ -340,16 +340,16 @@ import huaweiLogo from '../assets/logo/Huawei Logo.png';
 import antLogo from '../assets/logo/ant.png';
 
 const experiences = [
-  {
-    id: 1,
-    type: 'work',
-    title: 'VLA Algorithm Intern',
-    period: 'May 2025 - Present',
-    organization: 'Spirit AI',
-    organizationLink: 'https://spirit-ai.com/',
-    logo: spiritAILogo,
-    icon: ClockCircleOutlined
-  },
+  // {
+  //   id: 1,
+  //   type: 'work',
+  //   title: 'VLA Algorithm Intern',
+  //   period: 'May 2025 - Present',
+  //   organization: 'Spirit AI',
+  //   organizationLink: 'https://spirit-ai.com/',
+  //   logo: spiritAILogo,
+  //   icon: ClockCircleOutlined
+  // },
   {
     id: 2,
     type: 'work',
